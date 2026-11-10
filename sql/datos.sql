@@ -1,0 +1,133 @@
+INSERT INTO autor (nombre, apellido) VALUES
+('Frank', 'Moya Pons'),
+('Gabriel', 'García Márquez'),
+('Juan', 'Bosch'),
+('Pedro', 'Mir'),
+('Marcio', 'Veloz Maggiolo'),
+('Mario', 'Vargas Llosa'),
+('Julio', 'Cortázar'),
+('Isabel', 'Allende'),
+('Stephen', 'Hawking'),
+('Yuval Noah', 'Harari'),
+('Donald', 'Knuth'),
+('Robert', 'Kiyosaki'),
+('Paulo', 'Freire'),
+('Euclides', 'Da Cunha'),
+('Miguel', 'de Cervantes'),
+('Varios', 'Autores'),
+('Ernst', 'Gombrich'),
+('Carl', 'Sagan');
+
+INSERT INTO categoria (nombre, descripcion) VALUES
+('Historia', 'Historia dominicana, caribeña y universal.'),
+('Literatura', 'Novelas, cuentos, poesía y obras literarias.'),
+('Ciencias', 'Ciencias naturales, física, química y biología.'),
+('Tecnología', 'Informática, programación y tecnología.'),
+('Educación', 'Pedagogía, aprendizaje y recursos educativos.'),
+('Geografía', 'Geografía, territorios y atlas.'),
+('Arte', 'Arte, diseño, música y cultura.'),
+('Filosofía', 'Pensamiento, ética y filosofía.'),
+('Matemáticas', 'Matemáticas y resolución de problemas.'),
+('Derecho', 'Legislación, derecho y ciudadanía.');
+
+INSERT INTO material (titulo, anio, isbn, categoria_id) VALUES
+('Historia Dominicana', 2018, '9780000000010', 1),
+('Compendio de Historia Dominicana', 2020, '9780000000027', 1),
+('Cien años de soledad', 1967, '9780000000034', 2),
+('La ciudad y los perros', 1963, '9780000000041', 2),
+('El coronel no tiene quien le escriba', 1961, '9780000000058', 2),
+('Versos libres', 2019, '9780000000065', 2),
+('Breve historia del tiempo', 1988, '9780000000072', 3),
+('Sapiens', 2011, '9780000000089', 3),
+('Introducción a la programación', 2023, '9780000000096', 4),
+('Fundamentos de bases de datos', 2022, '9780000000102', 4),
+('Pedagogía del oprimido', 1968, '9780000000119', 5),
+('Atlas de geografía mundial', 2021, '9780000000126', 6),
+('Historia del arte', 2020, '9780000000133', 7),
+('Introducción a la filosofía', 2019, '9780000000140', 8),
+('Matemáticas para todos', 2024, '9780000000157', 9),
+('Introducción al derecho', 2021, '9780000000164', 10),
+('Don Quijote de la Mancha', 1605, '9780000000171', 2),
+('Rayuela', 1963, '9780000000188', 2),
+('La casa de los espíritus', 1982, '9780000000195', 2),
+('Cosmos', 1980, '9780000000201', 3);
+
+INSERT INTO material_autor (id_material, id_autor) VALUES
+(1, 1), (2, 1), (3, 2), (4, 6), (5, 2), (6, 4),
+(7, 9), (8, 10), (9, 16), (10, 16), (11, 13), (12, 16),
+(13, 17), (14, 16), (15, 16), (16, 16), (17, 15), (18, 7),
+(19, 8), (20, 18);
+
+INSERT INTO ejemplar (id_material, codigo, estado) VALUES
+(1, 'BNPHU-001', 'Disponible'),
+(1, 'BNPHU-002', 'Prestado'),
+(1, 'BNPHU-003', 'Disponible'),
+(2, 'BNPHU-004', 'Disponible'),
+(2, 'BNPHU-005', 'Disponible'),
+(3, 'BNPHU-006', 'Disponible'),
+(3, 'BNPHU-007', 'Prestado'),
+(3, 'BNPHU-008', 'Disponible'),
+(4, 'BNPHU-009', 'Disponible'),
+(4, 'BNPHU-010', 'Disponible'),
+(5, 'BNPHU-011', 'Disponible'),
+(5, 'BNPHU-012', 'Disponible'),
+(7, 'BNPHU-013', 'Prestado'),
+(7, 'BNPHU-014', 'Disponible'),
+(8, 'BNPHU-015', 'Disponible'),
+(9, 'BNPHU-016', 'Disponible'),
+(9, 'BNPHU-017', 'Disponible'),
+(10, 'BNPHU-018', 'Prestado'),
+(10, 'BNPHU-019', 'Disponible'),
+(11, 'BNPHU-020', 'Disponible'),
+(12, 'BNPHU-021', 'Disponible'),
+(13, 'BNPHU-022', 'Disponible'),
+(13, 'BNPHU-023', 'Mantenimiento'),
+(14, 'BNPHU-024', 'Disponible'),
+(15, 'BNPHU-025', 'Prestado'),
+(15, 'BNPHU-026', 'Disponible'),
+(16, 'BNPHU-027', 'Disponible'),
+(17, 'BNPHU-028', 'Disponible'),
+(17, 'BNPHU-029', 'Disponible'),
+(18, 'BNPHU-030', 'Disponible'),
+(19, 'BNPHU-031', 'Prestado'),
+(19, 'BNPHU-032', 'Disponible'),
+(20, 'BNPHU-033', 'Disponible'),
+(20, 'BNPHU-034', 'Disponible');
+
+INSERT INTO usuario (nombre, apellido, documento, telefono, correo, estado) VALUES
+('Johan', 'Almanzar', '001-0000000-0', '809-555-1001', 'johan.almanzar@example.com', 'Activo'),
+('Maria', 'Gomez', '001-0000001-8', '809-555-1002', 'maria.gomez@example.com', 'Activo'),
+('Luis', 'Rodriguez', '001-0000002-6', '809-555-1003', 'luis.rodriguez@example.com', 'Activo'),
+('Ana', 'Martinez', '001-0000003-4', '809-555-1004', 'ana.martinez@example.com', 'Activo'),
+('Carlos', 'Diaz', '001-0000004-2', '809-555-1005', 'carlos.diaz@example.com', 'Activo'),
+('Sofia', 'Hernandez', '001-0000005-0', '809-555-1006', 'sofia.hernandez@example.com', 'Activo'),
+('Pedro', 'Ramirez', '001-0000006-9', '809-555-1007', 'pedro.ramirez@example.com', 'Activo'),
+('Laura', 'Castillo', '001-0000007-7', '809-555-1008', 'laura.castillo@example.com', 'Activo'),
+('Diego', 'Mendez', '001-0000008-5', '809-555-1009', 'diego.mendez@example.com', 'Suspendido'),
+('Valeria', 'Torres', '001-0000009-3', '809-555-1010', 'valeria.torres@example.com', 'Activo'),
+('Jose', 'Santos', '001-0000010-7', '809-555-1011', 'jose.santos@example.com', 'Inactivo'),
+('Camila', 'Perez', '001-0000011-5', '809-555-1012', 'camila.perez@example.com', 'Activo');
+
+INSERT INTO empleado (nombre, apellido, cargo, usuario_sistema, estado) VALUES
+('Ana', 'Perez', 'Bibliotecaria', 'aperez', 'Activo'),
+('Carlos', 'Diaz', 'Encargado de préstamos', 'cdiaz', 'Activo'),
+('Laura', 'Nuñez', 'Auxiliar de circulación', 'lnunez', 'Activo'),
+('Miguel', 'Torres', 'Administrador bibliotecario', 'mtorres', 'Activo'),
+('Sofia', 'Castillo', 'Auxiliar de sala', 'scastillo', 'Activo'),
+('Amaya', 'Emilia', 'Encargada de prestamos', 'scatillo', 'Activo');
+
+INSERT INTO prestamo
+    (id_usuario, id_ejemplar, id_empleado, fecha_prestamo, fecha_limite, fecha_devolucion, estado)
+VALUES
+(1, 2, 1, '2026-09-10', '2026-09-17', NULL, 'Activo'),
+(2, 7, 2, '2026-09-09', '2026-09-16', NULL, 'Activo'),
+(3, 13, 1, '2026-09-12', '2026-09-19', NULL, 'Activo'),
+(4, 18, 3, '2026-09-11', '2026-09-18', NULL, 'Activo'),
+(5, 25, 2, '2026-09-11', '2026-09-18', NULL, 'Activo'),
+(6, 31, 1, '2026-09-08', '2026-09-14', NULL, 'Atrasado'),
+(7, 1, 3, '2026-08-01', '2026-08-08', '2026-08-07', 'Devuelto'),
+(8, 4, 2, '2026-08-03', '2026-08-10', '2026-08-09', 'Devuelto'),
+(1, 6, 1, '2026-08-05', '2026-08-12', '2026-08-12', 'Devuelto'),
+(3, 9, 3, '2026-08-08', '2026-08-15', '2026-08-14', 'Devuelto'),
+(4, 15, 2, '2026-08-12', '2026-08-19', '2026-08-18', 'Devuelto'),
+(5, 22, 1, '2026-08-15', '2026-08-22', '2026-08-25', 'Devuelto');

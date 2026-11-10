@@ -1,0 +1,3 @@
+# Dependencias del proyecto (una por línea).
+# Por ahora no se necesita ninguna librería externa.
+# Ejemplo de cómo agregar una:  requests==2.32.3
