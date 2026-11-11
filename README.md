@@ -23,8 +23,8 @@ Docente: Robinson Sánchez
 Necesitas Python 3.10 o superior. No hay que instalar nada más (Tkinter y SQLite vienen con Python).
 
 ```
-git clone <dirección del repositorio>
-cd proyecto_base
+git clone https://github.com/JohanADJ777/SISTEMA-BNPHU.git
+cd SISTEMA-BNPHU
 python app.py
 ```
 
